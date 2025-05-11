@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: saudi-tourism-chatbot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python chatbot_api.py
+    plan: free
+    envVars:
+      - key: OPENAI_API_KEY
+        value: your-key-here
